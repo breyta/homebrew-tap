@@ -5,13 +5,13 @@
 class Breyta < Formula
   desc "Command-line interface for working with Breyta flows"
   homepage "https://flows.breyta.ai"
-  version "2026.4.4"
+  version "2026.4.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/breyta/breyta-cli/releases/download/v2026.4.4/breyta_2026.4.4_darwin_amd64.tar.gz"
-      sha256 "d5b7fb92695cf73e414661dd57be80b330106ddec96bdecc434461371ea8afb6"
+      url "https://github.com/breyta/breyta-cli/releases/download/v2026.4.5/breyta_2026.4.5_darwin_amd64.tar.gz"
+      sha256 "7a9a7dd1cca6b22ecb0b5a0ca233a0543b2e6c3a1ee721e75faaf84dbbbbfe90"
 
       define_method(:install) do
         bin.install "breyta"
@@ -19,8 +19,8 @@ class Breyta < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/breyta/breyta-cli/releases/download/v2026.4.4/breyta_2026.4.4_darwin_arm64.tar.gz"
-      sha256 "894835c96810b7cdc6635a373ed3cc8dd17b18e0e79005e433fb726a08d1c232"
+      url "https://github.com/breyta/breyta-cli/releases/download/v2026.4.5/breyta_2026.4.5_darwin_arm64.tar.gz"
+      sha256 "991ccad393babdcfdcfebbc6b40d9370d36fa95a58a0211e7f402a4ccfc33458"
 
       define_method(:install) do
         bin.install "breyta"
@@ -31,16 +31,16 @@ class Breyta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/breyta/breyta-cli/releases/download/v2026.4.4/breyta_2026.4.4_linux_amd64.tar.gz"
-      sha256 "d3303939bef12244004d1c87f79ca748fd1ccc78c23b65c923730979fb031b60"
+      url "https://github.com/breyta/breyta-cli/releases/download/v2026.4.5/breyta_2026.4.5_linux_amd64.tar.gz"
+      sha256 "5c82d5a7a7757a567fee0c4366bd1061ba93f5e110874c65f601c78a008a23d8"
       define_method(:install) do
         bin.install "breyta"
         bin.install "parinfer-rust"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/breyta/breyta-cli/releases/download/v2026.4.4/breyta_2026.4.4_linux_arm64.tar.gz"
-      sha256 "beebf1199797c97ed12c0ece5db16bb74fc8cb5b2f48bbc1e6605a170d2eda2a"
+      url "https://github.com/breyta/breyta-cli/releases/download/v2026.4.5/breyta_2026.4.5_linux_arm64.tar.gz"
+      sha256 "7d53bcedcc7abc192d1b752f8b8a7789fbb9c276f9f8e9e6980c15265db38fb8"
       define_method(:install) do
         bin.install "breyta"
         bin.install "parinfer-rust"
